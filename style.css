@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #9b1506;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.shortcuts-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 1fr;  
+    gap: 15px;
+    padding: 20px;
+}
+
+.shortcut-btn {
+    background: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 10px;
+    
+
+    aspect-ratio: 1 / 1;
+    min-height: 0;  
+}
+
+.shortcut-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.icon {
+    font-size: 2em; 
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    word-break: break-word;  
+    max-width: 100%;
+}
+
+.label {
+    font-size: 0.85em;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    line-height: 1.2;
+    word-break: break-word;
+}
+
+
+.youtube {
+    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+}
+
+.google {
+    background: linear-gradient(135deg, #4285f4 50%, #1f53ff 100%);
+}
+
+.facebook {
+    background: linear-gradient(135deg, #1100ff 0%, #0c63d4 100%);
+}
+
+.instagram {
+    background: linear-gradient(135deg, #a200ff 0%, #ff002b, #ff0000, #ffe600);
+}
+
+.classroom {
+    background: linear-gradient(135deg, #00c853 0%, #009624 100%);
+}
+
+.drive {
+    background: linear-gradient(135deg, #149c0c 1%, #ffb005 30%, #ff1e00 50%, #170fb0 100%);
+}
+
+.reg {
+    background: linear-gradient(135deg, #e75949 100%);
+}
+
+.digiclass {
+    background: #0d00ff;   
+}
+
+.canva { 
+    background-color: #006eff;
+}
+
+.zoom {
+    background: linear-gradient(135deg, #1100ff 0%, #4285f4 100%);
+}
+
+.meet {
+    background: linear-gradient(135deg, #149c0c 0%, #006eff 60%, #ffe600 100%);
+}
+
+.calendar {
+    background: linear-gradient(135deg, #006eff 0%, #149c0c 100%); 
+}
+
+.youtube .label,
+.google .label,
+.facebook .label,
+.instagram .label,
+.classroom .label,
+.drive .label,
+.reg .label,
+.digiclass .label,
+.canva .label,
+.zoom .label,
+.meet .label,
+.calendar .label,
+.youtube .icon,
+.google .icon,
+.facebook .icon,
+.instagram .icon,
+.classroom .icon,
+.drive .icon,
+.reg .icon,
+.digiclass .icon,
+.canva .icon,
+.zoom .icon,
+.meet .icon,
+.calendar .icon {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .shortcuts-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .shortcuts-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    .icon {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .shortcuts-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .icon {
+        font-size: 1.3em;
+    }
+    
+    .label {
+        font-size: 0.75em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
